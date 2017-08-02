@@ -1,0 +1,89 @@
+html{
+  background-color: #374441;
+  font-family: cursive;
+}
+.done-true
+{
+  color: #2B7572;
+  text-decoration: line-through;
+}
+.todoForm
+{
+  color: cyan;
+  text-align: center;
+  padding: 10px;
+}
+.input-text
+{
+  background-color: #F4EFAE;
+  font-family: cursive;
+  width: 90%;
+  padding: 20px;
+
+}
+
+.button {
+  font-family: cursive;
+    background-color: #35856D;
+    border: none;
+    color: white;
+    margin-top: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button-archive {
+  font-family: cursive;
+    background-color: #4D4D4B;
+    border: none;
+    color: white;
+    margin-top: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.span-rem
+{
+    margin: 0 auto;
+    width: 500px;
+    height: 100px;
+    background-color: #B2B5A7;
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+}
+
+.taskList
+{
+      text-align: left;
+      background-color: #F1D8D3;
+      border-radius: 12px;
+      width: auto;
+      padding: 7px;
+      margin: 15px auto;
+}
+
+.completedList
+{
+      text-align: right;
+      background-color: #C6EC9F;
+      border-radius: 12px;
+      width: auto;
+      padding: 7px;
+      margin: 15px auto;
+}
+
+h4
+{
+  background-color: #B3F1E7;
+  margin-left: 0px auto;
+  padding: 3px;
+  text-align: center;
+  border-radius: 3px;
+}

@@ -1,0 +1,46 @@
+<!--  refer https://angularjs.org/ -->
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <script type="text/javascript" src="scripts/angular.js"></script>
+    <script type="text/javascript" src="scripts/todo.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="utf-8">
+    <title>TODO</title>
+  </head>
+  <body>
+    <div ng-controller="todoController as todoList">
+      <form class="todoForm" ng-submit="todoList.addToDo()">
+        <input type="text" class="input-text" ng-model="todoList.todoText" placeholder="Add new task" size="25" maxlength="20"
+        required>
+        <input type="submit" class="button" value="Add">
+      </form>
+      <div class="span-rem">
+      <span >{{todoList.remaining()}} tasks remaining out of {{todoList.todos.length}} tasks</span><br>
+      <button class="button-archive" type="button" ng-click="todoList.archive()">Archive</button>
+      <button class="button-archive" type="button" ng-click="todoList.selectAll()">selectAll</button>
+    </div>
+      <div style="float:left;">
+        <h4>Tasks remaining</h4>
+      <ul style="list-style:none;" class="list">
+        <li ng-repeat="task in todoList.todos">
+          <label  class="taskList">
+            <input type="checkbox" hidden="true" ng-model="task.done">
+            <span class="done-{{task.done}}">{{task.text}}</span>
+          </label><br><br>
+        </li><br>
+      </ul>
+    </div>
+    <div style="float:right;" >
+      <h4>Tasks completed</h4>
+      <ul style="list-style:none;" class="list">
+        <li ng-repeat="task in todoList.completed">
+          <label class="completedList">
+            <input type="checkbox" hidden="true" ng-model="task.done">
+            <span >{{task.text}}</span>
+          </label><br><br>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
